@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services Section</title>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.9.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <div id="assignment" class="container w-11/12 mx-auto my-10">
+    <!-- Title -->
+    <h2 class="text-center text-3xl font-bold mb-10">Our Services</h2>
+    
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Card 1 -->
+      <div class="relative group bg-white p-6 pt-16 rounded-lg shadow-lg transition-transform duration-500 hover:rotate-360">
+        <div class="absolute border-4 border-gray-100 -top-10 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-full ">
+          <!-- Icon -->
+          <img src="https://img.icons8.com/ios-filled/50/000000/plumbing.png" alt="Plumbing Icon" class="h-12 w-12">
+        </div>
+        <h3 class="text-xl font-semibold text-center">Emergency Plumbing Services</h3>
+        <p class="text-center text-gray-500 mb-4">
+          Our plumbers are ready 24/7, even on holidays.
+        </p>
+        <a href="#" class="text-blue-500 font-bold text-center block">Explore This Service &gt;</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="relative group bg-white p-6 pt-16 rounded-lg shadow-lg transition-transform duration-500 hover:rotate-360">
+        <div class="absolute border-4 border-gray-100 -top-10 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-full ">
+          <!-- Icon -->
+          <img src="https://img.icons8.com/ios-filled/50/000000/plumbing.png" alt="Drain Icon" class="h-12 w-12">
+        </div>
+        <h3 class="text-xl font-semibold text-center">Plumbing and Drains</h3>
+        <p class="text-center text-gray-500 mb-4">
+          We fix thousands of repairs daily.
+        </p>
+        <a href="#" class="text-blue-500 font-bold text-center block">Explore This Service &gt;</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="relative group bg-white p-6 pt-16 rounded-lg shadow-lg transition-transform duration-500 hover:rotate-360">
+        <div class="absolute border-4 border-gray-100 -top-10 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-full">
+          <!-- Icon -->
+          <img src="https://img.icons8.com/ios-filled/50/000000/plumbing.png" alt="Water Damage Icon" class="h-12 w-12">
+        </div>
+        <h3 class="text-xl font-semibold text-center">Water Damage</h3>
+        <p class="text-center text-gray-500 mb-4">
+          Equipped with state-of-the-art extraction tools.
+        </p>
+        <a href="#" class="text-blue-500 font-bold text-center block">Explore This Service &gt;</a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="relative group bg-white p-6 pt-16 rounded-lg shadow-lg transition-transform duration-500 hover:rotate-360">
+        <div class="absolute border-4 border-gray-100 -top-10 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-full ">
+          <!-- Icon -->
+          <img src="https://img.icons8.com/ios-filled/50/000000/plumbing.png" alt="Water Heater Icon" class="h-12 w-12">
+        </div>
+        <h3 class="text-xl font-semibold text-center">Water Heaters</h3>
+        <p class="text-center text-gray-500 mb-4">
+          Repair and replacement of gas, electric, and tankless heaters.
+        </p>
+        <a href="#" class="text-blue-500 font-bold text-center block">Explore This Service &gt;</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // GSAP animation for hover rotate effect
+    document.querySelectorAll('.group').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        gsap.to(card, { rotation: 360, duration: 10, });
+      });
+      card.addEventListener('mouseleave', () => {
+        gsap.to(card, { rotation: 0, duration: 1, ease: "power1.inOut" });
+      });
+    });
+  </script>
+
+</body>
+</html>
